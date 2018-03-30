@@ -6,7 +6,7 @@
 
 # Aviso
 
-> Este bot é uma versão alternativa do [Athenos Privado](https://github.com/DMVMarcio/Athenos).
+> Este bot é uma versão alternativa e publica do BOT [Athenos Privado](https://github.com/DMVMarcio/Athenos).
 
 
 ## Usage

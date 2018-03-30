@@ -89,7 +89,7 @@ client.on("ready", () => {
 
     const membrosNomes = string
     var statusIDO = ["idle", "dnd", "online"]
-    var jogando = []
+    var jogando = [`Athenos - ${client.users.size - 1} usuários`, `Athenos - ${client.guilds.size} servidores`, `Athenos - Me adicione ao seu servidor: https://discordapp.com/oauth2/authorize?client_id=421759842382774272&scope=bot&permissions=2146958591`, `Athenos - Entre no meu servidor: https://discord.gg/9WUTx4A`, `Athenos - Use p!help para saber meus comandos`]
 
     console.log(`Conectado !`)
     setTimeout(function() {
@@ -97,6 +97,7 @@ client.on("ready", () => {
     }, 2000)
     client.user.setGame(jogando[Math.round(Math.random() * jogando.length - 1)], "https://www.twitch.tv/zmarciogod")
     client.user.setStatus(statusIDO[Math.round(Math.random() * statusIDO.length - 1)]);
+    client.guilds.get("426467143245103124").channels.get("426467143245103127").sendMessage("**:warning: Dynos reiniciados.**");
     setInterval(() => {
         client.user.setGame(jogando[Math.round(Math.random() * jogando.length - 1)], "https://www.twitch.tv/zmarciogod")
         client.user.setStatus(statusIDO[Math.round(Math.random() * statusIDO.length - 1)]);

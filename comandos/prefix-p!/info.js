@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
             },
             {
               "name": ":tools: Ajudantes:",
-              "value": `- **${kauan}**\n- **${zagrion}**\n- **${natsu}**`,
+              "value": `- **${john}**\n- **${zagrion}**\n- **${natsu}**`,
               "inline": true
             },
             {

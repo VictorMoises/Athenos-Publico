@@ -22,12 +22,12 @@ exports.run = (client, message, args) => {
           "fields": [
             {
               "name": ":bust_in_silhouette: Donos:",
-              "value": `- ${marcio}\n- ${julia}\n- ${kauan}`,
+              "value": `- **${marcio}**\n- **${julia}**\n- **${kauan}**`,
               "inline": true
             },
             {
               "name": ":tools: Ajudantes:",
-              "value": `- ${kauan}\n- ${zagrion}\n- ${natsu}`,
+              "value": `- **${kauan}**\n- **${zagrion}**\n- **${natsu}**`,
               "inline": true
             },
             {

@@ -11,6 +11,33 @@ var database = require("./database.js");
 var nicknames = require('nicknames');
 const fs = require('fs');
 
+client.on('guildMemberAdd', member => {
+
+    database.Guilds.findOne({
+        "_id": member.guild.id
+    }, function(erro, documento) {
+
+        if (documento) {
+
+            if (documento.welcome) {
+
+                var bemvindo = documento.welcomemsg
+                client.guilds.get(member.guild.id).channels.get(documento.welcomechannel).sendMessage(bemvindo.replace(/{member}/g, `<@${member.id}>`).replace(/{guild}/g, `${member.guild.name}`).replace(/{name}/g, `${member.username}`));
+
+            } else {}
+
+        } else {}
+
+    })
+})
+
+client.on('guildDelete', guild => {
+
+    database.Guilds.deleteOne({
+        "_id": guild.id
+    }, function(erro, documento) {})
+
+})
 
 fs.readdir("./eventos/", (err, files) => {
     if (err) return console.error("[ERRO] " + err);

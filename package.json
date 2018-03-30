@@ -21,6 +21,7 @@
     "mongoose": "^5.0.4",
     "nick-generator": "^1.0.0",
     "nicknames": "^1.0.2",
+    "cleverbot-node": "^0.3.11",
     "ping": "^0.2.2"
   }
 }

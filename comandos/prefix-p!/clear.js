@@ -1,5 +1,6 @@
 exports.run = (client, message, args)  => {
-let reason = args.slice(0).join(' ');
+
+    let reason = args.slice(0).join(' ');
 
   if(!client.guilds.get("399756948951662592").members.get(message.guild.owner.id)) return message.reply("**Meus comandos só funcionarão se o dono do servidor estiver em meu server. Use p!info para pegar o invite.**");
 

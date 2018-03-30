@@ -4,12 +4,16 @@ const client = new Discord.Client({
     autoReconnect: true,
     max_message_cache: 0
 });
+const Cleverbot = require("cleverbot-node");
 const moment = require('moment');
 moment.locale('pt-BR');   
 const config = require('./config.json');
 var database = require("./database.js");
 var nicknames = require('nicknames');
 const fs = require('fs');
+const clbot = new Cleverbot;
+
+clbot.configure({botapi: "CC7zh62uug3jf70cJzB_IkC5QzA"});
 
 client.on('guildMemberAdd', member => {
 

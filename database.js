@@ -6,3 +6,4 @@ mongoose.connect(process.env.database, {
     if (err) return console.log("Erro ao conectar no database!");
     console.log("Conectado ao BANCO DE DADOS!");
 })
+

@@ -31,6 +31,26 @@ client.on('guildMemberAdd', member => {
     })
 })
 
+client.on('guildMemberRemove', member => {
+
+    database.Guilds.findOne({
+        "_id": member.guild.id
+    }, function(erro, documento) {
+
+        if (documento) {
+
+            if (documento.byebye) {
+
+                var bbbyebye = documento.byebyemsg
+                client.guilds.get(member.guild.id).channels.get(documento.byebyechannel).sendMessage(bbbyebye.replace(/{member}/g, `<@${member.id}>`).replace(/{guild}/g, `${member.guild.name}`).replace(/{name}/g, `${member.username}`));
+
+            } else {}
+
+        } else {}
+
+    })
+})
+
 client.on('guildDelete', guild => {
 
     database.Guilds.deleteOne({

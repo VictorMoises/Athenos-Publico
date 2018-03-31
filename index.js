@@ -30,6 +30,13 @@ client.on('guildMemberAdd', member => {
 
             } else {}
 
+            if (documento.autorole) {
+
+                var cargo = documento.autoroleid
+                client.guilds.get(member.guild.id).members.get(member.user.id).addRole(client.guilds.get(member.guild.id).roles.get(cargo));
+
+            } else {}
+
         } else {}
 
     })

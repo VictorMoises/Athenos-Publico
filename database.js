@@ -34,6 +34,14 @@ var Guild = new Schema({
     byebyemsg: {
         type: String,
         default: "Nenhuma"
+    },
+    autorole: {
+        type: Boolean,
+        default: false
+    },
+    autoroleid: {
+        type: String,
+        dafault: "Nenhum"
     }
 })
 

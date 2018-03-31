@@ -31,6 +31,11 @@ exports.run = (client, message, args) => {
                             "embed": {
                                 "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ WELCOME ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```p!welcome set <mensagem de bem-vindo>```",
                                 "color": 55512,
+                                "timestamp": new Date(),
+                                "footer": {
+                                  "icon_url": message.author.displayAvatarURL,
+                                  "text": message.author.username
+                                },
                                 "thumbnail": {
                                     "url": "https://i.imgur.com/4JaNmFp.png"
                                 }
@@ -57,6 +62,11 @@ exports.run = (client, message, args) => {
                             "embed": {
                                 "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ WELCOME ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```{member} menciona o usuário\n{guild} fala o nome do servidor\n{name} fala o nome do usuário```",
                                 "color": 55512,
+                                "timestamp": new Date(),
+                                "footer": {
+                                  "icon_url": message.author.displayAvatarURL,
+                                  "text": message.author.username
+                                },
                                 "thumbnail": {
                                     "url": "https://i.imgur.com/4JaNmFp.png"
                                 }
@@ -67,6 +77,11 @@ exports.run = (client, message, args) => {
                             "embed": {
                                 "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ WELCOME ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Mensagem:** " + documento.welcomemsg + "\n**Canal de bem-vindo:** <#" + documento.welcomechannel + ">\nㅤ\n**Como usar:**\n```{member} menciona o usuário\n{guild} fala o nome do servidor\n{name} fala o nome do usuário```",
                                 "color": 55512,
+                                "timestamp": new Date(),
+                                "footer": {
+                                  "icon_url": message.author.displayAvatarURL,
+                                  "text": message.author.username
+                                },
                                 "thumbnail": {
                                     "url": "https://i.imgur.com/4JaNmFp.png"
                                 }
@@ -81,6 +96,11 @@ exports.run = (client, message, args) => {
                     "embed": {
                         "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ WELCOME ❄**ㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```p!welcome set\np!welcome remove\np!welcome info```",
                         "color": 55512,
+                        "timestamp": new Date(),
+                        "footer": {
+                          "icon_url": message.author.displayAvatarURL,
+                          "text": message.author.username
+                        },
                         "thumbnail": {
                             "url": "https://i.imgur.com/4JaNmFp.png"
                         }
@@ -98,7 +118,9 @@ exports.run = (client, message, args) => {
                 welcomemsg: "Nenhuma",
                 byebye: false,
                 byebyechannel: "Nenhum",
-                byebyemsg: "Nenhuma"
+                byebyemsg: "Nenhuma",
+                autorole: false,
+                autoroleid: "Nenhum"
             })
             servidor.save()
             message.reply("**Use o comando novamente!**");

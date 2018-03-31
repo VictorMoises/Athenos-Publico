@@ -45,7 +45,7 @@ exports.run = (client, message, args) => {
 
                 if (message.content.startsWith("p!autorole info")) {
 
-                    if (!documento.byebye) {
+                    if (!documento.autorole) {
                         message.channel.sendMessage({
                             "embed": {
                               "description": "ㅤㅤㅤㅤㅤㅤㅤㅤㅤ**❄ ATHENOS ❄**ㅤㅤㅤㅤㅤㅤㅤㅤㅤ\nㅤ\n**Como usar:**\n```\np!autorole set <menção do cargo>\np!autorole remove```",

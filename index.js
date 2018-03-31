@@ -166,6 +166,8 @@ client.login(token)
 
 client.on("message", (message) => {
 
-
+    if(message.content.includes("<@421759842382774272>")){
+        message.reply("**Use p!help para saber meus comandos. :smile:**");
+    }
 
 });

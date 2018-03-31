@@ -13,7 +13,7 @@ var nicknames = require('nicknames');
 const fs = require('fs');
 const clbot = new Cleverbot;
 
-clbot.configure({botapi: "CC7zh62uug3jf70cJzB_IkC5QzA"});
+clbot.configure({botapi: process.env.cleverapi});
 
 client.on('guildMemberAdd', member => {
 

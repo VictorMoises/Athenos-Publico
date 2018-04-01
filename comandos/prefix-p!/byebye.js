@@ -2,12 +2,13 @@ var database = require("../../database.js")
 
 exports.run = (client, message, args) => {
 
-    if(!client.guilds.get("399756948951662592").members.get(message.guild.owner.id)) return message.reply("**Meus comandos só funcionarão se o dono do servidor estiver em meu server. Use p!info para pegar o invite.**");
 
     let razaou = args.slice(0).join(' ');
     let razaod = args.slice(1).join(' ');
 
-    if (!message.member.hasPermission(["MANAGE_GUILD"])) return message.reply("**Você não tem permissão para setar um byebye!**");
+    var desenvolvedores = ["315263840268976128", "254042074712768512", "425797924232888340", "404966710077292544", "286144811680137218", "273691083425447936"]
+
+    if (!message.member.hasPermission(["MANAGE_GUILD"]) || !desenvolvedores.includes(message.author.id)) return message.reply("**Você não tem permissão para setar um byebye!**");
 
     database.Guilds.findOne({
         "_id": message.guild.id

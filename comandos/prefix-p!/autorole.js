@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
 
     var desenvolvedores = ["315263840268976128", "254042074712768512", "425797924232888340", "404966710077292544", "286144811680137218", "273691083425447936"]
 
-    if (message.member.hasPermission(["MANAGE_ROLES_OR_PERMISSIONS"]) || desenvolvedores.includes(message.author.id)) return message.reply("**Você não tem permissão para setar um autorole!**");
+    if (!message.member.hasPermission(["MANAGE_ROLES_OR_PERMISSIONS"]) || !desenvolvedores.includes(message.author.id)) return message.reply("**Você não tem permissão para setar um autorole!**");
 
     database.Guilds.findOne({
         "_id": message.guild.id

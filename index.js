@@ -150,7 +150,7 @@ client.on("ready", () => {
 
     console.log(`Conectado !`)
     setTimeout(function() {
-        console.log(`                   ---== ATHENOS ==---                 \n\Servers: (${client.users.size}):\n\n${servidores}`);
+        console.log(`                   ---== ATHENOS ==---                 \n\Servers: (${client.guilds.size}):\n\n${servidores}`);
     }, 2000)
     client.user.setGame(`Athenos - ${client.users.size} membros em ${client.guilds.size} guilds com ${client.channels.size} canais.`, "https://www.twitch.tv/zmarciogod")
     client.user.setStatus(statusIDO[Math.round(Math.random() * statusIDO.length - 1)]);
